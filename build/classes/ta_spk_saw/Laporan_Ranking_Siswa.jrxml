@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Laporan_Ranking_Siswa" language="groovy" pageWidth="687" pageHeight="842" columnWidth="647" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f0bb4898-f36a-4bd1-9590-794ad9577e92">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="4"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM tb_peringkat ORDER BY Nilai_Ranking DESC]]>
+	</queryString>
+	<field name="Nis_Siswa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nilai_Ranking" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Kelas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Semester" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tahun_Ajaran" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="144" splitType="Stretch">
+			<staticText>
+				<reportElement x="138" y="13" width="368" height="33" uuid="990763c6-95ca-4294-a574-7bb5e2e1fe40"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN HASIL RANKING SISWA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="47" width="298" height="30" forecolor="#003399" uuid="6fc05493-138e-43e4-902b-213ddb793d47"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MTsN 2 KOTA TANGERANG]]></text>
+			</staticText>
+			<image>
+				<reportElement x="14" y="24" width="100" height="97" uuid="e21a0e65-9b76-4e55-99be-e80782054338"/>
+				<imageExpression><![CDATA["D:\\TA\\TA_SPK_SAW\\src\\img\\logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="131" y="83" width="382" height="19" uuid="288e1802-9aac-4257-91d7-bd3cd27e8ee6"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. KH. Hasyim Ashari No. 25 Pinang, Kota Tangerang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="102" width="184" height="19" uuid="4abe7aa3-20df-41f0-bf14-af201ffe5039"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Banten - Indonesia 15145]]></text>
+			</staticText>
+			<image>
+				<reportElement x="534" y="21" width="115" height="95" uuid="2b39ac29-aab3-432b-a7fd-fc1af10d6c7d"/>
+				<imageExpression><![CDATA["D:\\TA\\TA_SPK_SAW\\src\\img\\logo_kota_tangerang.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="647" height="1" uuid="d960a44f-3faa-4965-9f0f-33e53d9bdbf9"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="71" y="20" width="92" height="15" forecolor="#000000" uuid="2c9f7820-84f3-4a04-b5d0-1678b806b077"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="162" y="19" width="184" height="15" forecolor="#000000" uuid="48c74394-8ea0-4652-b014-7ae054485ea4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="346" y="19" width="59" height="15" forecolor="#000000" uuid="d25f5dce-1880-4cc1-8239-7123496b5c3b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nilai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="405" y="19" width="56" height="15" forecolor="#000000" uuid="d893fea0-1dee-4b1b-a857-ad090a80b896"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Kelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="461" y="19" width="92" height="15" forecolor="#000000" uuid="4ce4989f-bc49-4d76-9147-e44fd9a61b38"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Semester]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="553" y="19" width="92" height="15" forecolor="#000000" uuid="0711b10b-d86e-4508-8774-0d978090629a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Tahun Ajaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="21" width="69" height="15" uuid="dfdd0d08-2bdc-4661-a561-211a5a02c697"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Peringkat]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="7523b8e2-b033-4be7-b5f1-e221b9f52d6c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="70" y="0" width="92" height="15" uuid="e8a7df5f-505b-4060-aaa2-916f943b4226"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Nis_Siswa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="346" y="1" width="59" height="15" uuid="dc610d9c-4d2d-442a-b243-a6eeec5122c9"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Nilai_Ranking}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="405" y="1" width="56" height="15" uuid="a8c9d9a7-4ea5-4811-ac57-10d23da7bf51"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="461" y="0" width="92" height="15" uuid="11882f12-5ddc-4996-8b79-a56fddf98dfc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Semester}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="555" y="1" width="92" height="15" uuid="238e2e3f-d95a-4a1c-bd46-703dba5294e1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Tahun_Ajaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="0" width="70" height="15" uuid="146eb096-106e-488b-823f-ff53bdfa0902"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="162" y="0" width="184" height="15" uuid="39db9c14-4bc1-4ce3-8206-d0a2dbf13c99"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Nama}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="647" height="1" uuid="bb51dd2f-cd12-4b7a-a453-daba4fba0aa2"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="dbf1e8cd-d972-4a80-ac1a-08793a802241"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="624065a7-af9e-40eb-b611-1a187f64b9a3"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="625d84c0-01a0-4f9f-b8c8-09a1eb38cf1f"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
